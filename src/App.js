@@ -21,11 +21,7 @@ const App = () => {
     const response = await fetch(`${apiUrl} &s=${title}`);
     const data = await response.json();
 
-    if (data.Search) {
-      setMovies(data.Search);
-    } else {
-      setMovies([]);
-    }
+    setMovies(data.Search);
   };
 
   useEffect(() => {
